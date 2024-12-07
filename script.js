@@ -22,8 +22,8 @@ function startTimer() {
         timeRunning();
         if (time <= 0) {
             clearInterval(countdown);
-            stop.disabled = true;
             start.disabled = false;
+            stopTime.disabled = true; 
             alert('Time Is Up!!!')
         }
     }, 1000);
@@ -34,6 +34,7 @@ function stopTimer() {
     clearInterval(countdown);
     start.disabled = false;
     stopTime.disabled = true;
+    isTimerunning = false;
     alert(`Time is stopped at ${time} seconds`)
 }
 
